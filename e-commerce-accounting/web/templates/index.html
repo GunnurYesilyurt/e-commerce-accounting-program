@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Finance Manager</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Finance Management Dashboard</h1>
+        
+        <!-- Cost Management Section -->
+        <section>
+            <h2>Barcode-Based Cost Management</h2>
+            <div id="cost-cards" class="grid"></div>
+        </section>
+
+        <hr>
+
+        <!-- Report Generation Section -->
+        <section>
+            <h2>Financial Report Generator</h2>
+            <div class="date-picker">
+                <label>Start Date: <input type="date" id="start-date" value="2023-10-01"></label>
+                <label>End Date: <input type="date" id="end-date" value="2023-10-31"></label>
+                <button onclick="calculateReport()">Generate Report</button>
+            </div>
+
+            <div id="report-dashboard" class="grid" style="display:none;">
+                <div class="card bg-primary"><h3>Total Revenue</h3><p id="res-revenue">₺0.00</p></div>
+                <div class="card bg-success"><h3>Net Profit</h3><p id="res-profit">₺0.00</p></div>
+                <div class="card bg-info"><h3>Profit Margin</h3><p id="res-margin">%0.00</p></div>
+                <div class="card"><h3>Product Costs</h3><p id="res-prod-cost">₺0.00</p></div>
+                <div class="card"><h3>Packaging</h3><p id="res-pack">₺0.00</p></div>
+                <div class="card"><h3>Commissions</h3><p id="res-comm">₺0.00</p></div>
+            </div>
+        </section>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
